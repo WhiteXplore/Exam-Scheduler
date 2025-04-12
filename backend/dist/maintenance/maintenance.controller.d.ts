@@ -1,0 +1,33 @@
+import { MaintenanceService } from './maintenance.service';
+import { CreateMaintenanceDepartmentDto } from './dto/create-maintenance-department.dto';
+import { CreateMaintenanceTimeDto } from './dto/create-maintenance-time.dto';
+import { CreateMaintenanceDesignationDto } from './dto/create-maintenance-designation.dto';
+import { CreateMaintenanceProgramDto } from './dto/create-maintenance-program.dto';
+import { CreateMaintenanceRankDto } from './dto/create-maintenance-rank.dto';
+import { CreateMaintenanceSchoolYearDto } from './dto/create-maintenance-school-year.dto';
+import { CreateMaintenanceSalutationDto } from './dto/create-maintenance-salutation.dto';
+import { MaintenanceDepartment } from 'src/entities/maintenance-department.entity';
+import { MaintenanceDesignation } from 'src/entities/maintenance-designation.entity';
+import { MaintenanceProgram } from 'src/entities/maintenance-program.entity';
+import { MaintenanceRank } from 'src/entities/maintenance-rank.entity';
+import { MaintenanceSalutation } from 'src/entities/maintenance-salutation.entity';
+import { MaintenanceSchoolYear } from 'src/entities/maintenance-school-year.entity';
+import { MaintenanceTime } from 'src/entities/maintenance-time.entity';
+export declare class MaintenanceController {
+    private readonly maintenanceService;
+    constructor(maintenanceService: MaintenanceService);
+    addDepartment(createDepartmentDto: CreateMaintenanceDepartmentDto): Promise<MaintenanceDepartment>;
+    getAllDepartments(): Promise<MaintenanceDepartment[]>;
+    addDesignation(createDesignationDto: CreateMaintenanceDesignationDto): Promise<MaintenanceDesignation>;
+    getAllDesignations(): Promise<MaintenanceDesignation[]>;
+    addProgram(createProgramDto: CreateMaintenanceProgramDto): Promise<MaintenanceProgram>;
+    getAllPrograms(): Promise<MaintenanceProgram[]>;
+    addRank(createRankDto: CreateMaintenanceRankDto): Promise<MaintenanceRank>;
+    getAllRanks(): Promise<MaintenanceRank[]>;
+    addSalutation(createSalutationDto: CreateMaintenanceSalutationDto): Promise<MaintenanceSalutation>;
+    getAllSalutations(): Promise<MaintenanceSalutation[]>;
+    addSchoolYear(createSchoolYear: CreateMaintenanceSchoolYearDto): Promise<MaintenanceSchoolYear>;
+    getAllSchoolYear(): Promise<MaintenanceSchoolYear[]>;
+    addTime(createTimeDto: CreateMaintenanceTimeDto): Promise<MaintenanceTime>;
+    getAllTime(): Promise<MaintenanceTime[]>;
+}

@@ -1,0 +1,41 @@
+import { EntryService } from './entry.service';
+import { CreateEntryClassDto } from './dto/create-entry-class.dto';
+import { CreateEntryRoomDto } from './dto/create-entry-room.dto';
+import { CreateEntrySubjectDto } from './dto/create-entry-subject.dto';
+import { CreateEntryTeacherDto } from './dto/create-entry-teacher,dto';
+import { CreateEntryInstitutesDto } from './dto/create-entry-institutes.dto';
+import { CreateEntryYearDto } from './dto/create-entry-year.dto';
+import { CreateEntryDayDto } from './dto/create-entry-day.dto';
+import { EntryRoom } from 'src/entities/entry-room.entity';
+import { EntryClass } from 'src/entities/entry-class.entity';
+import { EntrySubject } from 'src/entities/entry-subject.entity';
+import { EntryTeacher } from 'src/entities/entry-teacher.entity';
+import { EntryInstitutes } from 'src/entities/entry-institutes.entity';
+import { EntryYear } from 'src/entities/entry-year.entity';
+import { CreateEntrySetDto } from './dto/create-entry-set.dto';
+import { EntrySet } from 'src/entities/entry-set.entity';
+import { EntryDay } from 'src/entities/entry-day.entity';
+export declare class EntryController {
+    private readonly entryService;
+    constructor(entryService: EntryService);
+    addRoom(createRoomDto: CreateEntryRoomDto): Promise<EntryRoom>;
+    getAllRooms(): Promise<EntryRoom[]>;
+    uploadCSV(file: Express.Multer.File): Promise<any>;
+    addClass(createClassDto: CreateEntryClassDto): Promise<EntryClass>;
+    getAllClasses(): Promise<EntryClass[]>;
+    remove(id: string): Promise<{
+        message: string;
+    }>;
+    addSubject(createSubjectDto: CreateEntrySubjectDto): Promise<EntrySubject>;
+    getAllSubject(): Promise<EntrySubject[]>;
+    addTeacher(createTeacherDto: CreateEntryTeacherDto): Promise<EntryTeacher>;
+    getAllTeachers(): Promise<EntryTeacher[]>;
+    addInstitutes(createInstitutesDto: CreateEntryInstitutesDto): Promise<EntryInstitutes>;
+    getAllInstitutes(): Promise<EntryInstitutes[]>;
+    addYears(createYearDto: CreateEntryYearDto): Promise<EntryYear>;
+    getAllYears(): Promise<EntryYear[]>;
+    addSets(createSetDto: CreateEntrySetDto): Promise<EntrySet>;
+    getAllSets(): Promise<EntrySet[]>;
+    addDay(createDayDto: CreateEntryDayDto): Promise<EntryDay>;
+    getAllDays(): Promise<EntryDay[]>;
+}
