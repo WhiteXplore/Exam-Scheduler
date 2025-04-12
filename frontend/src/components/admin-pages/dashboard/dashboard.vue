@@ -1,5 +1,5 @@
 <template>
-  <div>Dashboard</div>
+  <div>Dashboard Page</div>
 </template>
 <script>
 export default {
